@@ -33,8 +33,8 @@ const TodoList = ({todos , setTodos, setEditTodo}) => {
                 <input 
                     type="text"
                     value={todo.title} 
-                    // className={`list  ${todo.completed ? "complete" : ""}`} 
-                    className="list"
+                    className={`list  ${todo.completed ? "complete" : ""}`} 
+                    // className="list"
                     onChange={(event)=> event.preventDefault()} 
                 />
                 <div>

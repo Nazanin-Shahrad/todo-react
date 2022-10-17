@@ -31,16 +31,16 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
         e.preventDefault();
         
         
-        setTodos([...todos , {id:uuidv4() , title:input , completed:false}]);
-        console.log(input);
-        setInput("");
-        // if(!editTodo){
+        // setTodos([...todos , {id:uuidv4() , title:input , completed:false}]);
+        // console.log(input);
+        // setInput("");
+        if(!editTodo){
 
-        //     setTodos([...todos , {id:uuidV4() , title:input , completed:false}]);
-        //     setInput("");
-        // } else {
-        //     updateTodo(input , editTodo.id , editTodo.completed)
-        // }
+            setTodos([...todos , {id:uuidv4() , title:input , completed:false}]);
+            setInput("");
+        } else {
+            updateTodo(input , editTodo.id , editTodo.completed)
+        }
     }
   return (
   <form onSubmit={onFormSubmit}>
@@ -53,8 +53,7 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
         onChange={onInputChange}
     />
     <button className='button-add' >
-        {/* {editTodo ? "OK" : "Add"} */}
-        Add
+        {editTodo ? "OK" : "Add"}
     </button>
   </form>
   )
