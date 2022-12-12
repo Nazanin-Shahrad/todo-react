@@ -24,14 +24,15 @@ function App() {
         <div>
           <Header />
         </div>
-        <div>
+        <div className='input-button'>
           <Form  
           input={input} 
           setInput={setInput} 
           todos={todos}
           setTodos={setTodos} 
           editTodo={editTodo} 
-          setEditTodo={setEditTodo}/>
+          setEditTodo={setEditTodo}
+          />
         </div>
         <div>
           <TodoList 
